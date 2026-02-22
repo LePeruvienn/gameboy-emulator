@@ -23,6 +23,8 @@ class Cartridge
 public:
 
 	Cartridge(const std::string& rom_str);
+	void read(std::uint16_t adress, std::uint8_t* buffer, std::uint16_t size = 1);
+	void write(std::uint16_t adress, std::uint8_t* buffer, std::uint16_t size = 1);
 
 private:
 

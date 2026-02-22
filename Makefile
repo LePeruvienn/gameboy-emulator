@@ -1,7 +1,7 @@
 ROM_PATH = roms/SuperMarioLandJUE.gb
 
 CPPC = g++
-CFLAGS = -Wall -Wextra -std=c++20 -Iinclude
+CFLAGS = -Wall -Wextra -std=c++20 -Iinclude -g
 
 SRCDIR = src
 OBJDIR = obj

@@ -11,6 +11,22 @@ Cartridge::Cartridge(const std::string& file_path) : file_path(file_path)
 	print_header();
 }
 
+void Cartridge::read(std::uint16_t adress, std::uint8_t* buffer, std::uint16_t size)
+{
+	for(std::uint16_t i = 0; i < size; i++)
+	{
+		buffer[i] = rom_buffer[adress + i];
+	}
+}
+
+void Cartridge::write(std::uint16_t adress, std::uint8_t* buffer, std::uint16_t size)
+{
+	for(std::uint16_t i = 0; i < size; i++)
+	{
+		rom_buffer[adress + i] = buffer[i];
+	}
+}
+
 void Cartridge::read_data() {
 
 	std::ifstream ifs(file_path, std::ios::binary);

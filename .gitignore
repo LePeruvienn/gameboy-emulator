@@ -3,5 +3,4 @@ obj/
 roms/
 
 compile_commands.json
-guide_emulateur_gameboy.pdf
 gameboy
